@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ClearSource - 3D Model</title>
+
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+        }
+
+        #heading {
+            position: fixed;
+            width: 100%;
+            padding: 64px;
+        }
+
+        .border {
+            background: linear-gradient(90deg, gray, 90%, black);
+            height: 2px;
+            width: 1100px;
+            margin-top: 4px;
+        }
+
+        h1 {
+            color: rgb(215, 215, 215);
+            font-size: 7em;
+            font-family: 'Code';
+            margin: 0px;
+        }
+
+        #progress-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #progress {
+            font-family: 'Code';
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body style="background: white;">
+    <div id="heading">
+        <h1>3D Model</h1>
+        <div class="border"></div>
+    </div>
+    <div id="progress-container">
+        <div id="progress">LOADING 0/100</div>
+    </div>
+    <script type="module" src="js/3d.js"></script>
+</body>
+
+</html>
